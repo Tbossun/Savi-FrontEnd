@@ -9,7 +9,7 @@ import arrowIcon from "../../../Assests/icons/Arrow.svg";
 const AddFeatures = ({ icon, title, description, marginRight }) => {
     return (
         <div
-        className="feature card flex-column align-items-center p-2 w-40"
+        className=" flex-column align-items-center p-2 w-40"
         style={{
           marginRight: marginRight,
           border: "none",
@@ -17,14 +17,14 @@ const AddFeatures = ({ icon, title, description, marginRight }) => {
         }}
       >
         <div className="d-flex align-items-center justify-content-center card-icon-container">
-          <img src={icon} className="card-icon w-10 h-10" alt={title} />
+          <img src={icon} className="w-10 h-10" alt={title} />
         </div>
-        <h2 className="card-title font-weight-normal text-dark mt-3">{title}</h2>
-        <h6 className="card-description font-weight-light text-center text-dark w-75 mx-auto">
+        <h2 className="font-weight-normal text-dark mt-3">{title}</h2>
+        <h6 className="font-weight-light text-center text-dark w-75 mx-auto">
           {description}
         </h6>
         <a>
-        <div className="learnMore-container d-flex align-items-center mt-1 cursor-pointer">
+        <div className="d-flex align-items-center mt-1 cursor-pointer">
           <h5 style={{ color: "#b5179e" }}>Learn more</h5>
             <div className="px-2 mb-3">
                 <img src={arrowIcon} alt="arrowIcon" />
@@ -65,7 +65,7 @@ const FeatureSection = () => {
   ];
 
   return (
-    <section className="features-section bg-white py-5">
+    <section className="bg-white py-5">
       <div className="container d-flex flex-wrap justify-content-center">
         {cardDetails.map((cardDetail, index) => (
           <div

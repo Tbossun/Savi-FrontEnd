@@ -21,11 +21,11 @@ export const FooterComp = () => {
         </h6>
         <hr/>
         <div className="mt-3 d-flex justify-content-center">
-          <Image className="footer__container--icon mx-2" src={Instagram} alt="Instagram_Logo" />
-          <Image className="footer__container--icon mx-2" src={Twitter} alt="Twitter_Logo" />
-          <Image className="footer__container--icon mx-2" src={Youtube} alt="Youtube_Logo" />
+          <Image className="mx-2" src={Instagram} alt="Instagram_Logo" />
+          <Image className=" mx-2" src={Twitter} alt="Twitter_Logo" />
+          <Image className="mx-2" src={Youtube} alt="Youtube_Logo" />
         </div>
-        <h6 className="mt-3 mb-0" style={{ color: "white" }}>
+        <h6 className="mt-3 mb-2 pb-2" style={{ color: "white" }}>
           © 2023 EasyLend. All rights reserved
         </h6>
       </div>

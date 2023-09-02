@@ -1,10 +1,12 @@
 import React from 'react'
 import Logo from  "../../Assests/svg/Savi..svg"
 import { ButtonComp } from './Button';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-    const handleSendInstructions = () => {
-        // navigate("/sign-up");
+  const navigate = useNavigate();
+    const handleSignUp = () => {
+         navigate("/signup");
       };
   return (
     <div>
@@ -27,7 +29,7 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
        
         </div>
-        <ButtonComp label="Get Started" width="151px" onClick={handleSendInstructions}/>
+        <ButtonComp label="Get Started" width="151px" onClick={handleSignUp}/>
       </div>
     </nav>
   </div>  
