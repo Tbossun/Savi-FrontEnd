@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function FormInput({
   title,
@@ -14,16 +14,17 @@ export default function FormInput({
 }) {
   return (
     <div
-      className="custominput"
+      className="form-group" 
       style={{
-        marginTop: title ? "16px" : "0px",
+        marginTop: title ? '16px' : '0px',
+        borderColor: 'red',
       }}
     >
       {title && (
         <p
           className="custominput__title"
           style={{
-            marginBottom: title ? "8px" : "0px",
+            marginBottom: title ? '8px' : '0px',
           }}
         >
           {title}
@@ -36,23 +37,23 @@ export default function FormInput({
             alt="icon"
             className="custominput__iconleft"
             style={{
-              position: "absolute",
-              left: leftIcon ? "24px" : "0px",
-              top: leftIcon ? "10px" : "0px",
+              position: 'absolute',
+              left: leftIcon ? '24px' : '0px',
+              top: leftIcon ? '10px' : '0px',
             }}
           />
         )}
         <input
-          className="custominput__input"
+          className="form-control" 
           type={inputtype}
           placeholder={placeholder}
           {...register}
           style={{
-            paddingLeft: leftIcon ? "56px" : "16px",
-            paddingRight: rightIcon ? "42px" : "16px",
-            borderRadius: borderRadius ? borderRadius : "8px",
-            width: width ? width : "320px",
-            height: "46px",
+            paddingLeft: leftIcon ? '56px' : '16px',
+            paddingRight: rightIcon ? '42px' : '16px',
+            borderRadius: borderRadius ? borderRadius : '8px',
+            width: width ? width : '320px',
+            height: '46px',
           }}
         />
         {rightIcon && (
@@ -62,14 +63,14 @@ export default function FormInput({
             onClick={onClick ? onClick : null}
             className="custominput__iconright"
             style={{
-              position: "absolute",
-              top: rightIcon ? "10px" : "0px",
-              right: "15px",
+              position: 'absolute',
+              top: rightIcon ? '10px' : '0px',
+              right: '15px',
             }}
           />
         )}
         {error && <p className="custominput__error">{error}</p>}
       </div>
     </div>
-  )
+  );
 }

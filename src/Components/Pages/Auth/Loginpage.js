@@ -5,7 +5,7 @@ import { ButtonComp } from '../../Common/Button';
 import { useMutation } from '@tanstack/react-query';
 import Savilogo from "../../../Assests/svg/Savi..svg";
 import CloseEye from "../../../Assests/svg/eye-close.svg";
-import WhiteSaviLogo from "../../../Assests/svg/Savi..svg"; 
+import WhiteSaviLogo from "../../../Assests/svg/White_Logo.svg"; 
 import Forminput from '../../Common/FormInput';
 import { useToast } from "@chakra-ui/react";
 import { loginSchema } from '../../../Utils/Auth';
@@ -67,15 +67,15 @@ export const LoginPage = () => {
   
   return (
     <div className="container-fluid">
-  <div className="row">
-    <div className="col-md-6 left-section" style={{ backgroundImage: `url(${backgroundImage})`, height: '100vh', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'relative' }}>
+    <div className="row">
+    <div className="col-md-6 left-section" style={{ backgroundImage: `url(${backgroundImage})`, height: '100vh', backgroundRepeat: 'no-repeat',     backgroundSize: 'cover', position: 'relative' }}>
       <div className="overlay">
-        <img src={WhiteSaviLogo} alt="Whitelogo" className="img-fluid" />
+        <img src={WhiteSaviLogo} alt="Whitelogo" className="img-fluid p-4" />
         <div className="text-wrapper" style={{ color: 'white', position: 'absolute', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', maxWidth: '80%', width: '80%' }}>
           <h2 className="display-4 heading">Easy Group Savings</h2>
-          <p className="lead subheading">
+          <h5 className="lead subheading font-weight-bold">
             Save collectively with rotating lump sum payouts, eliminating risks of the traditional method.
-          </p>
+          </h5>
         </div>
       </div>
     </div>
@@ -83,7 +83,7 @@ export const LoginPage = () => {
       <form className="loginform">
         <div className="text-2 text-center mb-3">
           <div className="d-flex flex-column align-items-center">
-            <img src={Savilogo} alt="logo" className="img-fluid" />
+            <img src={Savilogo} alt="logo" className="img-fluid mb-3" />
             <p className="welcome text-center">Welcome back to Savi.</p>
           </div>
         </div>
@@ -108,33 +108,36 @@ export const LoginPage = () => {
             title="Password"
             placeholder="Enter Password"
             inputtype={passwordType}
-            // rightIcon={passwordType === "password" ? EyeIcon : CloseEye}
+            //rightIcon={passwordType === "password" ? EyeIcon : CloseEye}
             register={register("password")} 
             error={errors?.password?.message}
             onClick={handlePasswordType}
             isDisabled={isLoading}
             className="form-control password-input border" 
           />              
-          <div className="forgot">
-            {" "}
-            <a href="/password-reset1">Forgot Password</a>
+          <div className="forgot mt-2 mb-2">
+            <a className="text-primary" href="/passwordreset">Forgot Password?</a>
           </div>
           <ButtonComp
             label="Sign in"
             width="100%"
             onClick={handleSubmit(formSubmit)}
             isLoading={isLoading}
-            className="btn btn-primary"
+            className="btn btn-primary mt-2 mb-2"
           />
           <p className="account">
             Don't have an account?{" "}
-            <a className="link" href="/sign-up">
+            <a className="text-primary link" href="/signup">
               Sign Up here
             </a>
           </p>
         </div>
       </form>
     </div>
+    <div className="resetfooter d-flex justify-content-between">
+        <p>Privacy Policy</p>
+        <p>&copy; 2022</p>
+      </div>
   </div>     
 </div>
 
