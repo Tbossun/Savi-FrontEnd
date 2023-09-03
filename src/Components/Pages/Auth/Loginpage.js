@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { ButtonComp } from '../../Common/Button';
 import { useMutation } from '@tanstack/react-query';
 import Savilogo from "../../../Assests/svg/Savi..svg";
-import CloseEye from "../../../Assests/svg/eye-close.svg";
 import WhiteSaviLogo from "../../../Assests/svg/White_Logo.svg"; 
 import Forminput from '../../Common/FormInput';
 import { useToast } from "@chakra-ui/react";
@@ -13,7 +12,6 @@ import { login } from '../../../Api/auth';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { togglePasswordType } from '../../../Utils/common';
-import EyeIcon from "../../../Assests/svg/eye.svg";
 import backgroundImage from '../../../Assests/images/EasyGroupImg.webp';
 
 export const LoginPage = () => {
@@ -67,18 +65,18 @@ export const LoginPage = () => {
   
   return (
     <div className="container-fluid">
-    <div className="row">
-    <div className="col-md-6 left-section" style={{ backgroundImage: `url(${backgroundImage})`, height: '100vh', backgroundRepeat: 'no-repeat',     backgroundSize: 'cover', position: 'relative' }}>
-      <div className="overlay">
-        <img src={WhiteSaviLogo} alt="Whitelogo" className="img-fluid p-4" />
-        <div className="text-wrapper" style={{ color: 'white', position: 'absolute', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', maxWidth: '80%', width: '80%' }}>
-          <h2 className="display-4 heading">Easy Group Savings</h2>
-          <h5 className="lead subheading font-weight-bold">
-            Save collectively with rotating lump sum payouts, eliminating risks of the traditional method.
-          </h5>
-        </div>
+    <div className="row" style={{ minHeight: '100vh' }}>
+  <div className="col-md-6 left-section" style={{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%', position: 'relative', height: '100vh' }}>
+    <div className="overlay">
+      <img src={WhiteSaviLogo} alt="Whitelogo" className="img-fluid p-4" />
+      <div className="text-wrapper" style={{ color: 'white', position: 'absolute', bottom: '10px', left: '50%', transform: 'translateX(-50%)', textAlign: 'center', maxWidth: '80%', width: '80%', marginBottom:"50px" }}>
+        <h2 className="display-4 heading">Easy Group Savings</h2>
+        <h5 className="lead subheading font-weight-bold">
+          Save collectively with rotating lump sum payouts, eliminating risks of the traditional method.
+        </h5>
       </div>
     </div>
+  </div>
     <div className="col-md-6 d-flex justify-content-center mt-4 align-items-center">
       <form className="loginform">
         <div className="text-2 text-center mb-3">
@@ -108,7 +106,6 @@ export const LoginPage = () => {
             title="Password"
             placeholder="Enter Password"
             inputtype={passwordType}
-            //rightIcon={passwordType === "password" ? EyeIcon : CloseEye}
             register={register("password")} 
             error={errors?.password?.message}
             onClick={handlePasswordType}
@@ -133,11 +130,9 @@ export const LoginPage = () => {
           </p>
         </div>
       </form>
+      
     </div>
-    <div className="resetfooter d-flex justify-content-between">
-        <p>Privacy Policy</p>
-        <p>&copy; 2022</p>
-      </div>
+    
   </div>     
 </div>
 

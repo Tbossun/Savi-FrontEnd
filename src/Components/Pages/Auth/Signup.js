@@ -3,22 +3,19 @@ import Forminput from "../../Common/FormInput";
 import { Image } from "react-bootstrap";
 import SaviWhiteLogo from "../../../Assests/svg/White_Logo.svg";
 import Logo from "../../../Assests/svg/Savi..svg";
-import EyeIcon from "../../../Assests/svg/eye.svg";
 import { togglePasswordType } from "../../../Utils/common";
 import { ButtonComp } from "../../Common/Button";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { signupSchema } from "../../../Utils/Auth";
-import CloseEye from "../../../Assests/svg/eye-close.svg";
 import { useMutation } from "@tanstack/react-query";
 import { signup } from "../../../Api/auth";
-import { useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
 import backgroundImage from '../../../Assests/svg/SaviImage.png';
 
 
 export const Signup = () => {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const toast = useToast();
   const {
     handleSubmit,
@@ -62,7 +59,7 @@ export const Signup = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-        <div className="col-md-6 firstSection" style={{ backgroundImage: `url(${backgroundImage})`, height: '100vh', backgroundRepeat: 'no-repeat',     backgroundSize: 'cover', position: 'relative' }}>
+        <div className="col-md-6 firstSection" style={{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%', position: 'relative', height: '100vh' }}>
           <Image
             src={SaviWhiteLogo}
             alt="logo"
@@ -148,7 +145,7 @@ export const Signup = () => {
               />
               <p className="mt-2">
                 Already have an account ?{" "}
-                <a href="/login" className="sign-link">
+                <a href="/login" className="text-primary">
                   Sign in here
                 </a>
               </p>
