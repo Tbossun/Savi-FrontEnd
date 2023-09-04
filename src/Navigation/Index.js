@@ -4,6 +4,7 @@ import LandingPage from '../Pages/LandingPage/LandingPage';
 import LoginPage from '../Components/Pages/Auth/Loginpage';
 import Signup from '../Components/Pages/Auth/Signup';
 import ResetPassword from '../Components/Pages/Auth/ResetPassword';
+import { Dashboard } from '../Components/Pages/dashboard';
 
 export default function SaviRoutes() {
   return (
@@ -13,6 +14,7 @@ export default function SaviRoutes() {
          <Route path="/login" element={<LoginPage />} />
          <Route path="/signup" element={<Signup />} />
          <Route path="/passwordreset" element={<ResetPassword />} />
+         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   )

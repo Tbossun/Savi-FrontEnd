@@ -1,4 +1,4 @@
-import { QueryPaths, StorageKeys } from "../Utils/contants";
+import { QueryPaths, StorageKeys } from "../Utils/constants";
 import { AxiosInstance } from "./init";
 
 export const CreateGroup = async (data) => {
